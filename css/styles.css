@@ -80,19 +80,16 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-box {
+.header__container {
   display: flex;
   align-items: center;
 }
 
 /* ========== Лого в шапці ========== */
 
-.header .logo {
-  margin-right: 93px;
-}
-
-.logo.link {
+.logo {
   display: inline-block;
+  margin-right: 93px;
 
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
@@ -100,10 +97,22 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-decoration: none;
 }
 
-.logo-part-head {
+.logo__second-part {
   color: #000000;
+}
+
+/* ========== Лого в підвалі ========== */
+
+.footer__logo {
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.logo__second-part--inverse {
+  color: var(--primary-bg-color);
 }
 
 /* ========== Навігація ========== */
@@ -113,15 +122,15 @@ body {
   align-items: center;
 }
 
-.site-nav {
+.nav__list {
   display: flex;
 }
 
-.site-nav .item + .item {
+.nav__item:nth-child(n + 2) {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.nav__link {
   position: relative;
 
   display: inline-block;
@@ -133,20 +142,21 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-decoration: none;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
 
-.site-nav .link.current::after {
+.nav__link--current::after {
   content: '';
 
   position: absolute;
@@ -162,16 +172,16 @@ body {
 
 /* ========== Комунікаційні посилання ========== */
 
-.com-link {
+.communication {
   display: flex;
   margin-left: auto;
 }
 
-.com-link .item + .item {
+.communication__item:nth-child(n + 2) {
   margin-left: 50px;
 }
 
-.com-link .link {
+.communication__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -182,33 +192,34 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-decoration: none;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.com-link-icon {
+.communication__icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.com-link-icon.envelope {
+.communication__icon--envelope {
   width: 16px;
   height: 12px;
 }
 
-.com-link-icon.smartphone {
+.communication__icon--smartphone {
   width: 10px;
   height: 16px;
 }
 
-.com-link .link:hover,
-.com-link .link:focus {
+.communication__link:hover,
+.communication__link:focus {
   color: var(--accent-color);
 }
 
-.com-link .link:hover .com-link-icon,
-.com-link .link:focus .com-link-icon {
+.communication__link:hover .communication__icon,
+.communication__link:focus .communication__icon {
   fill: var(--accent-color);
 }
 
@@ -627,16 +638,6 @@ body {
   padding-bottom: 60px;
 }
 
-/* ========== Лого в підвалі ========== */
-
-.footer .logo {
-  margin-bottom: 20px;
-}
-
-.logo-part-foot {
-  color: var(--primary-bg-color);
-}
-
 .footer-box {
   display: flex;
   align-items: baseline;
@@ -1006,7 +1007,8 @@ body {
   background-image: url(../images/check-empty.svg);
   border-radius: 3px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .check-box-new {
