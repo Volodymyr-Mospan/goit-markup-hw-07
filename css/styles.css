@@ -571,14 +571,32 @@ body {
 
 /* ========== Фільтр ========== */
 
-.filter-list {
+.portfolio-title--visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.filter {
   display: flex;
   justify-content: center;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   margin-bottom: 50px;
   column-gap: 8px;
 }
 
-.btn {
+.filter__btn {
   min-width: 73px;
   padding: 6px 22px;
 
@@ -600,8 +618,8 @@ body {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover,
-.btn:focus {
+.filter__btn:hover,
+.filter__btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -610,37 +628,44 @@ body {
 
 /* ========== Перелік робіт ========== */
 
-.portfolio-list {
+.portfolio {
   display: flex;
   flex-wrap: wrap;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   gap: var(--margin-items);
 }
 
-.portfolio-item {
+.portfolio__item {
   flex-basis: calc((100% - (2 * var(--margin-items))) / 3);
 
   background-color: var(--primary-bg-color);
 }
 
-.portfolio-item > .link {
+.portfolio__link {
   display: block;
+
+  text-decoration: none;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item > .link:hover,
-.portfolio-item > .link:focus {
+.portfolio__link:hover,
+.portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-thumb {
+.portfolio__thumb {
   position: relative;
 
   overflow: hidden;
 }
 
-.portfolio-overlay {
+.portfolio__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -655,9 +680,10 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-overlay p {
+.portfolio__text {
   display: flex;
   align-items: center;
+  margin: 0;
 
   height: 100%;
   overflow: auto;
@@ -667,12 +693,12 @@ body {
   color: var(--primary-bg-color);
 }
 
-.portfolio-item > .link:hover .portfolio-overlay,
-.portfolio-item > .link:focus .portfolio-overlay {
+.portfolio__link:hover .portfolio__overlay,
+.portfolio__link:focus .portfolio__overlay {
   transform: translateY(0);
 }
 
-.portfolio-item-box {
+.portfolio__lower-box {
   padding: 20px 23px 19px 23px;
 
   border-right: 1px solid #eeeeee;
@@ -680,8 +706,9 @@ body {
   border-left: 1px solid #eeeeee;
 }
 
-.portfolio-subtitle {
+.portfolio__name {
   margin-bottom: 4px;
+  margin-top: 0;
 
   color: var(--title-text-color);
   font-size: 18px;
@@ -689,7 +716,9 @@ body {
   letter-spacing: 0.06em;
 }
 
-.portfolio-item-box p {
+.portfolio__type {
+  margin: 0;
+
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 16px;
