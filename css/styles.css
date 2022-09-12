@@ -74,36 +74,6 @@ body {
   padding-bottom: 94px;
 }
 
-.btn {
-  min-width: 73px;
-  padding: 6px 22px;
-
-  color: var(--title-text-color);
-  background-color: var(--second-bg-color);
-
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-  text-align: center;
-
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn:hover,
-.btn:focus {
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 /* ==================== Шапка ==================== */
 
 .header {
@@ -489,8 +459,6 @@ body {
 }
 
 .socials-list__icon {
-  width: 20px;
-  height: 20px;
   fill: var(--default-icon-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -567,6 +535,36 @@ body {
   justify-content: center;
   margin-bottom: 50px;
   column-gap: 8px;
+}
+
+.btn {
+  min-width: 73px;
+  padding: 6px 22px;
+
+  color: var(--title-text-color);
+  background-color: var(--second-bg-color);
+
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ========== Перелік робіт ========== */
@@ -665,49 +663,44 @@ body {
   padding-bottom: 60px;
 }
 
-.footer-box {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
 /* ========== Адреса ========== */
 
-.address-list > .item + .item {
+.address__item:nth-child(n + 2) {
   margin-top: 9px;
 }
 
-.phys-address.link {
-  color: var(--primary-bg-color);
-  background-color: var(--third-bg-color);
-  font-style: normal;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.phys-address.link:hover,
-.phys-address.link:focus {
-  color: var(--accent-color);
-}
-
-.address.link {
+.address__link {
   color: var(--third-text-color);
   font-style: normal;
+  text-decoration: none;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address.link:hover,
-.address.link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--accent-color);
+}
+
+.address__link--light {
+  color: var(--primary-bg-color);
+  font-style: normal;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ========== Приєднуйся ========== */
 
-.join {
+.join-socials {
   margin-left: 70px;
 }
 
-.join-title {
+.join-socials__title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -717,37 +710,11 @@ body {
   color: var(--primary-bg-color);
 }
 
-.join-list {
-  display: flex;
-  column-gap: 10px;
-}
-
-.join-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-
+.socials-list__link--in-footer {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.join-icon {
-  width: 20px;
-  height: 20px;
-  fill: var(--primary-bg-color);
-}
-
-.join-link:hover,
-.join-link:focus {
-  background-color: var(--accent-color);
-}
-
-.join-link:hover .join-icon,
-.join-link:focus .join-icon {
+.socials-list__icon--in-footer {
   fill: var(--primary-bg-color);
 }
 
@@ -759,12 +726,12 @@ body {
   align-items: flex-end;
 }
 
-.subscription-label {
+.subscription-form__label {
   display: flex;
   flex-direction: column;
 }
 
-.subscriotion-title {
+.subscription-form__title {
   color: var(--primary-bg-color);
   font-weight: 700;
   line-height: 1.14;
@@ -773,7 +740,7 @@ body {
   margin-bottom: 20px;
 }
 
-.subscription-input {
+.subscription-form__input {
   padding: 14px 15px;
   width: 358px;
 
@@ -787,7 +754,7 @@ body {
   background-color: transparent;
 }
 
-.subscription-submit {
+.subscription-form__btn {
   margin-left: 12px;
   padding: 10px 28px;
 
@@ -807,16 +774,14 @@ body {
   cursor: pointer;
 }
 
-.subscription-submit:hover,
-.subscription-submit:focus {
+.subscription-form__btn:hover,
+.subscription-form__btn:focus {
   background-color: var(--hero-buttom-active);
 }
 
-.subscriptin-icon {
+.subscription-form__icon {
   margin-left: 10px;
   vertical-align: middle;
-  width: 24px;
-  height: 24px;
   fill: var(--primary-bg-color);
 }
 
