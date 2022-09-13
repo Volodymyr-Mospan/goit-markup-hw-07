@@ -1,8 +1,28 @@
-:root {
-  --margin-items: 30px;
-}
-
-@import './utils/colors';
-@import './utils/reset-styles';
+@import './utils/vars';
+@import './utils/visually-hidden';
+@import './base/body';
+@import './base/section';
+@import './base/container';
 @import './components/header';
+@import './components/logo';
+@import './components/navigation';
+@import './components/communication';
+@import './components/title';
+@import './components/hero';
+@import './components/features';
+@import './components/works';
+@import './components/team-list';
+@import './components/employee';
+@import './components/socials-list';
+@import './components/customers';
+@import './components/footer';
+@import './components/address';
+@import './components/join-socials';
+@import './components/subscription-form';
+@import './components/backdrop';
+@import './components/modal-window';
+@import './components/moodal-form';
+@import './components/filter';
+@import './components/portfolio';
+
 

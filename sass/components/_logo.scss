@@ -1,0 +1,34 @@
+/* ====================/ Лого основне \==================== */
+
+.logo {
+  display: inline-block;
+  margin-right: 93px;
+
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo__second-part {
+  color: #000000;
+}
+
+/* ====================\ Лого в шапці /==================== */
+
+
+/* ====================/ Лого в підвалі \==================== */
+
+.footer__logo {
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.logo__second-part--inverse {
+  color: var(--primary-bg-color);
+}
+
+/* ====================\ Лого в підвалі /==================== */

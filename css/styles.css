@@ -481,16 +481,6 @@
 
 /* ========== Постійні клієнти ========== */
 
-.customers__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
 .customers {
   display: flex;
   gap: var(--margin-items);
@@ -876,7 +866,7 @@
   border-radius: 4px;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
   transform: translate(-50%, -150%) scale(0.25);
 
   opacity: 0.25;
