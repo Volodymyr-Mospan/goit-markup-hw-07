@@ -27,38 +27,13 @@
   --margin-items: 30px;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-} */
-
-/* ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-} */
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-body {
+.body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-.link {
-  text-decoration: none;
 }
 
 .container {
@@ -210,15 +185,6 @@ body {
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.communication__icon--envelope {
-  width: 16px;
-  height: 12px;
-}
-
-.communication__icon--smartphone {
-  width: 10px;
-  height: 16px;
-}
 
 .communication__link:hover,
 .communication__link:focus {
@@ -360,12 +326,6 @@ body {
   border-radius: 4px;
 }
 
-.features__icon {
-  display: block;
-  width: 70px;
-  height: 70px;
-}
-
 .features__subtitle {
   margin-top: 0;
   margin-bottom: 10px;
@@ -395,6 +355,10 @@ body {
 
 .works__item {
   position: relative;
+}
+
+.works__img {
+  display: block;
 }
 
 .works__overlay {
@@ -449,6 +413,10 @@ body {
 .employee__lower-box {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.employee__photo {
+  display: block;
 }
 
 .employee__name {
@@ -550,8 +518,6 @@ body {
 
 .customers__icon {
   display: block;
-  width: 106px;
-  height: 60px;
   fill: var(--default-icon-color);
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -663,6 +629,10 @@ body {
   position: relative;
 
   overflow: hidden;
+}
+
+.portfolio__img {
+  display: block;
 }
 
 .portfolio__overlay {
