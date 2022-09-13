@@ -1,5 +1,3 @@
-/* ====================/ Лого основне \==================== */
-
 .logo {
   display: inline-block;
   margin-right: 93px;
@@ -11,24 +9,13 @@
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+
+  &__second-part {
+    color: #000000;
+  }
+
+  &__second-part--inverse {
+    color: var(--primary-bg-color);
+  }
 }
 
-.logo__second-part {
-  color: #000000;
-}
-
-/* ====================\ Лого в шапці /==================== */
-
-
-/* ====================/ Лого в підвалі \==================== */
-
-.footer__logo {
-  margin-right: 0;
-  margin-bottom: 20px;
-}
-
-.logo__second-part--inverse {
-  color: var(--primary-bg-color);
-}
-
-/* ====================\ Лого в підвалі /==================== */

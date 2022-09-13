@@ -1,5 +1,3 @@
-/* ========== Чим ми займаємось ========== */
-
 .works {
   display: flex;
   flex-wrap: wrap;
@@ -9,34 +7,33 @@
   margin: 0;
 
   gap: var(--margin-items);
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    padding: 27px;
+
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 700;
+    line-height: 1.14;
+    color: var(--primary-bg-color);
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
-
-.works__item {
-  position: relative;
-}
-
-.works__img {
-  display: block;
-}
-
-.works__overlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  padding: 27px;
-
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.works__text {
-  margin: 0;
-
-  font-weight: 700;
-  line-height: 1.14;
-  color: var(--primary-bg-color);
-  text-transform: uppercase;
-  text-align: center;
-}
-

@@ -12,7 +12,7 @@
   --margin-items: 30px;
 }
 
-.visually-hidden {
+.section__title--visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -39,15 +39,12 @@
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
 .section--other-size {
   padding-bottom: 0;
 }
-
 .section--second-bg {
   background-color: var(--second-bg-color);
 }
-
 .section__title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -55,20 +52,6 @@
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-.section__title--visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
 }
 
 .container {
@@ -79,16 +62,26 @@
   margin-right: auto;
 }
 
-.header {
-  border-bottom: 1px solid #ececec;
+.btn {
+  padding: 10px 20px;
+  min-width: 200px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
+.btn:hover,
+.btn:focus {
+  background-color: var(--hero-buttom-active);
 }
 
-/* ====================/ Лого основне \==================== */
 .logo {
   display: inline-block;
   margin-right: 93px;
@@ -100,40 +93,26 @@
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-
 .logo__second-part {
   color: #000000;
 }
-
-/* ====================\ Лого в шапці /==================== */
-/* ====================/ Лого в підвалі \==================== */
-.footer__logo {
-  margin-right: 0;
-  margin-bottom: 20px;
-}
-
 .logo__second-part--inverse {
   color: var(--primary-bg-color);
 }
 
-/* ====================\ Лого в підвалі /==================== */
-/* ====================/ Навігація \==================== */
 .nav {
   display: flex;
   align-items: center;
 }
-
 .nav__list {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .nav__item:nth-child(n+2) {
   margin-left: 50px;
 }
-
 .nav__link {
   position: relative;
   display: inline-block;
@@ -147,16 +126,12 @@
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.nav__link:hover,
-.nav__link:focus {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
 }
-
 .nav__link--current {
   color: var(--accent-color);
 }
-
 .nav__link--current::after {
   content: "";
   position: absolute;
@@ -168,8 +143,6 @@
   background-color: var(--accent-color);
 }
 
-/* ====================\ Навігація /==================== */
-/* ====================/ Комунікаційні посилання \==================== */
 .communication {
   display: flex;
   list-style: none;
@@ -177,11 +150,9 @@
   margin: 0;
   margin-left: auto;
 }
-
 .communication__item:nth-child(n+2) {
   margin-left: 50px;
 }
-
 .communication__link {
   display: flex;
   align-items: center;
@@ -195,24 +166,18 @@
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .communication__icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.communication__link:hover,
-.communication__link:focus {
+.communication__link:hover, .communication__link:focus {
   color: var(--accent-color);
 }
-
-.communication__link:hover .communication__icon,
-.communication__link:focus .communication__icon {
+.communication__link:hover .communication__icon, .communication__link:focus .communication__icon {
   fill: var(--accent-color);
 }
 
-/* ====================\ Комунікаційні посилання /==================== */
 .hero {
   max-width: 1600px;
   margin-left: auto;
@@ -225,7 +190,6 @@
   background-size: cover;
   background-position: center;
 }
-
 .hero__title {
   width: 696px;
   margin-left: auto;
@@ -239,29 +203,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
 .hero__btn {
   padding: 10px 32px;
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border-style: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hero__btn:hover,
-.hero__btn:focus {
-  background-color: var(--hero-buttom-active);
-}
-
-/* ========== Наші переваги (Особливості) ========== */
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -270,11 +215,9 @@
   margin: 0;
   gap: var(--margin-items);
 }
-
 .features__item {
   flex-basis: calc((100% - 3 * var(--margin-items)) / 4);
 }
-
 .features__box {
   display: flex;
   justify-content: center;
@@ -285,7 +228,6 @@
   background-color: var(--second-bg-color);
   border-radius: 4px;
 }
-
 .features__subtitle {
   margin-top: 0;
   margin-bottom: 10px;
@@ -294,12 +236,10 @@
   line-height: 1.14;
   text-transform: uppercase;
 }
-
 .features__text {
   margin: 0;
 }
 
-/* ========== Чим ми займаємось ========== */
 .works {
   display: flex;
   flex-wrap: wrap;
@@ -308,15 +248,12 @@
   margin: 0;
   gap: var(--margin-items);
 }
-
 .works__item {
   position: relative;
 }
-
 .works__img {
   display: block;
 }
-
 .works__overlay {
   position: absolute;
   left: 0;
@@ -325,7 +262,6 @@
   padding: 27px;
   background-color: rgba(47, 48, 58, 0.8);
 }
-
 .works__text {
   margin: 0;
   font-weight: 700;
@@ -351,16 +287,13 @@
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 .employee__lower-box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
 .employee__photo {
   display: block;
 }
-
 .employee__name {
   margin-top: 0;
   margin-bottom: 10px;
@@ -369,7 +302,6 @@
   font-size: 16px;
   line-height: 1.19;
 }
-
 .employee__position {
   font-size: 16px;
   line-height: 1.19;
@@ -454,18 +386,6 @@
 .customers__link:hover .customers__icon,
 .customers__link:focus .customers__icon {
   fill: var(--accent-color);
-}
-
-/* ==================== Підвал ==================== */
-.footer {
-  background-color: var(--third-bg-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.footer__container {
-  display: flex;
-  align-items: baseline;
 }
 
 /* ========== Адреса ========== */
@@ -554,23 +474,7 @@
 
 .subscription-form__btn {
   margin-left: 12px;
-  padding: 10px 28px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.subscription-form__btn:hover,
-.subscription-form__btn:focus {
-  background-color: var(--hero-buttom-active);
 }
 
 .subscription-form__icon {
@@ -809,27 +713,11 @@
   text-decoration: none;
 }
 
-.modal-form__btn-submit {
+.modal-form__btn {
   display: block;
-  padding: 10px 52px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--primary-bg-color);
-  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-style: none;
-  cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form__btn-submit:hover,
-.modal-form__btn-submit:focus {
-  background-color: var(--hero-buttom-active);
 }
 
 /* ========== Фільтр ========== */
@@ -847,16 +735,12 @@
 .filter__btn {
   min-width: 73px;
   padding: 6px 22px;
-  color: var(--title-text-color);
-  background-color: var(--second-bg-color);
-  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
+  color: var(--title-text-color);
+  background-color: var(--second-bg-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -966,4 +850,30 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+/* ==================== Підвал ==================== */
+.footer {
+  background-color: var(--third-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__logo {
+  margin-right: 0;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=main.css.map */
