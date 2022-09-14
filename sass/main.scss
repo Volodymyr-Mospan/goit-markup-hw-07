@@ -1,4 +1,5 @@
 @import './utils/vars';
+@import './utils/mixins';
 @import './utils/visually-hidden';
 
 @import './base/body';
@@ -9,19 +10,21 @@
 @import './components/logo';
 @import './components/navigation';
 @import './components/communication';
-@import './components/hero';
-@import './components/features';
-@import './components/works';
-@import './components/team-list';
 @import './components/socials-list';
-@import './components/customers';
 @import './components/address';
 @import './components/join-socials';
 @import './components/subscription-form';
 @import './components/backdrop';
 @import './components/modal-window';
 @import './components/moodal-form';
+@import './components/offer';
 @import './components/filter';
 @import './components/portfolio';
+
 @import './layout/header';
+@import './layout/hero';
+@import './layout/features';
+@import './layout/works';
+@import './layout/team-list';
+@import './layout/customers';
 @import './layout/footer';
